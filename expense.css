@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #80e8c9, #c3cfe2);
+  color: #333;
+  transition: background 0.5s ease;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 2rem;
+  background: rgb(0, 194, 171);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.login-container input,
+.login-container button {
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgb(0, 145, 170);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 300px 250px 250px 450px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form input {
+  padding: 10px;
+  margin: 5px;
+  width: 45%;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #eceff2;
+  margin: 10px 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.action-btn {
+  margin: 10px 10px 0 0;
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.logout-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media print {
+  .no-print, #loginSection, #incomeSection, form, .logout-btn, .delete-btn {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  .container {
+    box-shadow: none;
+    background: white;
+    color: black;
+  }
+}

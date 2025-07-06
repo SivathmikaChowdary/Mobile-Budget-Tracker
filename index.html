@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="expense.css" />
+</head>
+<body id="body">
+
+  <div id="loginSection" class="login-container">
+    <h2>🔐 Login to Budget Tracker</h2>
+    <form id="loginForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div id="trackerSection" class="container" style="display:none;">
+    <div class="top-bar">
+      <h2>💰 Welcome, <span id="userName">User</span></h2>
+      <button onclick="logout()" class="logout-btn no-print">Logout</button>
+    </div>
+
+    <div id="incomeSection" class="no-print">
+      <label>Enter your Monthly Income:</label>
+      <input type="number" id="incomeInput" placeholder="e.g., 50000" required />
+      <button onclick="setIncome()">Submit Income</button>
+    </div>
+
+    <div id="expenseSection" style="display:none;">
+      <h2>Total Budget: ₹<span id="totalIncome">0</span></h2>
+      <h3>Remaining: ₹<span id="remaining">0</span></h3>
+      <form id="expenseForm" class="no-print">
+        <input type="text" id="expenseName" placeholder="Expense Name" required />
+        <input type="number" id="expenseAmount" placeholder="Amount" required />
+        <button type="submit">Add Expense</button>
+      </form>
+      <ul id="expenseList"></ul>
+      <canvas id="budgetChart" width="300" height="300"></canvas>
+      <button onclick="exportCSV()" class="action-btn no-print">📥 Export CSV</button>
+      <button onclick="window.print()" class="action-btn no-print">🖨️ Print Summary</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
